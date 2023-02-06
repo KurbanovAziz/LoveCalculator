@@ -22,7 +22,7 @@ import retrofit2.Response
 class CalculateFragment : Fragment() {
 
     private lateinit var binding: FragmentCalculateBinding
-    private val viewModel : LoveViewModel by viewModels()
+    private val viewModel: LoveViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,19 +34,23 @@ class CalculateFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         initClickers()
     }
 
     private fun initClickers() {
         with(binding) {
             calculateBtn.setOnClickListener {
-                viewModel.getLiveLove(firstNameEd.text.toString(),secondNameEd.text.toString()).observe(
-                    viewLifecycleOwner, Observer {
-                        findNavController().navigate(R.id.resultFragment, bundleOf("key" to (it?.percentage
-                                )))
-                    }
-                )
+                viewModel.getLiveLove(firstNameEd.text.toString(), secondNameEd.text.toString())
+                    .observe(
+                        viewLifecycleOwner, Observer {
+                            findNavController().navigate(
+                                R.id.resultFragment, bundleOf(
+                                    "key" to (it?.percentage
+                                            )
+                                )
+                            )
+                        }
+                    )
             }
         }
     }
