@@ -19,7 +19,7 @@ class Pref(private val context: Context) {
 
     companion object{
 
-        private const val PREF_NAME = "pref_task_manager"
+        private const val PREF_NAME = "pref"
         private const val ON_BOARDING_SING = "is_seen"
     }
 }
