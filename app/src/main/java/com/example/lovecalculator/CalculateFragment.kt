@@ -39,10 +39,14 @@ class CalculateFragment : Fragment() {
 
     private fun initClickers() {
         with(binding) {
+            historyBtn.setOnClickListener {
+                findNavController().navigate(R.id.historyFragment)
+            }
             calculateBtn.setOnClickListener {
                 viewModel.getLiveLove(firstNameEd.text.toString(), secondNameEd.text.toString())
                     .observe(
                         viewLifecycleOwner, Observer {
+                            App.db.loveDao().insert(it)
                             findNavController().navigate(
                                 R.id.resultFragment, bundleOf(
                                     "key" to (it?.percentage
