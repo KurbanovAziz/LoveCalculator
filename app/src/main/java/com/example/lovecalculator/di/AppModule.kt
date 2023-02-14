@@ -37,14 +37,15 @@ class AppModule() {
 
     @Singleton
     @Provides
-    fun provideDataBase(@ApplicationContext app:Context):AppDataBase=
-        Room.databaseBuilder(app, AppDataBase::class.java,"love_data")
-            .allowMainThreadQueries().fallbackToDestructiveMigration().build()
+    fun provideDataBase(@ApplicationContext context:Context):AppDataBase{
+        return  Room.databaseBuilder(context, AppDataBase::class.java, "love_data")
+            .allowMainThreadQueries().build()
+    }
 
     @Singleton
     @Provides
-    fun provideHistoryDao(appDataBase:AppDataBase): LoveDao {
-        return  appDataBase.loveDao()
+    fun provideHistoryDao(@ApplicationContext context: Context): LoveDao {
+        return provideDataBase(context).loveDao()
     }
 
 

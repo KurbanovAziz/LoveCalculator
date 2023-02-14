@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.lovecalculator.R
 import com.example.lovecalculator.databinding.FragmentOnBoardingBinding
 import com.example.lovecalculator.onBoarding.adapter.OnBoardingAdapter
 
@@ -26,7 +25,7 @@ class OnBoardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = OnBoardingAdapter(this::onClick)
+        adapter = OnBoardingAdapter(this::onClick,requireContext())
         binding.viewPager.adapter = adapter
     }
 

@@ -11,7 +11,7 @@ import com.example.lovecalculator.remote.LoveModel
 interface LoveDao {
 
    @Insert
-    fun insert(loveModel: LoveModel)
+    fun insert(loveModel: List<LoveModel>)
 
     @Query("SELECT * FROM 'LOVE_HISTORY'")
     fun getAll(): List<LoveModel>
