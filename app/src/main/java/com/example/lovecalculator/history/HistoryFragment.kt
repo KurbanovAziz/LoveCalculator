@@ -1,16 +1,13 @@
-package com.example.lovecalculator
+package com.example.lovecalculator.history
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.lovecalculator.databinding.FragmentHistoryBinding
-import com.example.lovecalculator.repository.Repository
-import com.example.lovecalculator.room.LoveDao
-import com.example.lovecalculator.viewmodel.LoveViewModel
+import com.example.lovecalculator.room.local.LoveDao
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

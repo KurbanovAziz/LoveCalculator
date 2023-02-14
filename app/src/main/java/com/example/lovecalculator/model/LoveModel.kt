@@ -1,4 +1,4 @@
-package com.example.lovecalculator.remote
+package com.example.lovecalculator.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

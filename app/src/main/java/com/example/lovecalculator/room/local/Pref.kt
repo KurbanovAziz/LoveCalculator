@@ -1,8 +1,7 @@
-package com.example.lovecalculator
+package com.example.lovecalculator.room.local
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.google.android.material.shadow.ShadowRenderer
 
 class Pref(private val context: Context) {
 

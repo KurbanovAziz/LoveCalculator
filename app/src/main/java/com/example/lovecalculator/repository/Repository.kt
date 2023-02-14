@@ -3,8 +3,8 @@ package com.example.lovecalculator.repository
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.example.lovecalculator.remote.LoveApi
-import com.example.lovecalculator.remote.LoveModel
-import com.example.lovecalculator.room.LoveDao
+import com.example.lovecalculator.model.LoveModel
+import com.example.lovecalculator.room.local.LoveDao
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

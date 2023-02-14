@@ -2,10 +2,10 @@ package com.example.lovecalculator.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.lovecalculator.Pref
+import com.example.lovecalculator.room.local.Pref
 import com.example.lovecalculator.remote.LoveApi
-import com.example.lovecalculator.room.AppDataBase
-import com.example.lovecalculator.room.LoveDao
+import com.example.lovecalculator.room.local.AppDataBase
+import com.example.lovecalculator.room.local.LoveDao
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -37,7 +37,7 @@ class AppModule() {
 
     @Singleton
     @Provides
-    fun provideDataBase(@ApplicationContext context:Context):AppDataBase{
+    fun provideDataBase(@ApplicationContext context:Context): AppDataBase {
         return  Room.databaseBuilder(context, AppDataBase::class.java, "love_data")
             .allowMainThreadQueries().build()
     }

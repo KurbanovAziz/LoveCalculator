@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:padding="24dp"
-    tools:context=".HistoryFragment">
+    tools:context=".history.HistoryFragment">
 
 
     <TextView

@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_on_boarding" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.lovecalculator.HistoryFragment"
+        android:name="com.example.lovecalculator.history.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
 </navigation>

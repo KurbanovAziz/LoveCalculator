@@ -1,13 +1,11 @@
 package com.example.lovecalculator
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.example.lovecalculator.databinding.ActivityMainBinding
+import com.example.lovecalculator.room.local.Pref
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

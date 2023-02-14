@@ -2,8 +2,7 @@ package com.example.lovecalculator
 
 import android.app.Application
 import androidx.room.Room
-import com.example.lovecalculator.remote.LoveModel
-import com.example.lovecalculator.room.AppDataBase
+import com.example.lovecalculator.room.local.AppDataBase
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

@@ -1,10 +1,10 @@
-package com.example.lovecalculator.room
+package com.example.lovecalculator.room.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.lovecalculator.remote.LoveModel
+import com.example.lovecalculator.model.LoveModel
 
 
 @Dao
